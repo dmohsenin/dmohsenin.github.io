@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Darian Mohsenin</title>
+  <style>
+    body {
+      font-family: optima, sans-serif;
+      max-width: 1000px;
+      max-height: 1000px;
+      margin: 20px auto;
+      padding: 40px 20px;
+      background: #111;
+      color: #eee;
+    }
+
+    html {
+        background-image: url("neuron_clipart.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    a {
+      color: #aac4ff;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #444;
+      margin: 30px 0;
+    }
+
+    /* --- NAVBAR --- */
+    nav {
+      background-color: azure;
+      padding: 10px;
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      color: #111;
+      margin-right: 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- PAGES --- */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 6px;
+    }
+
+    /* --- TILE GRID --- */
+    .tile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .tile {
+      cursor: pointer;
+      border: 1px solid #555;
+    }
+
+    .tile:hover {
+      border-color: azure;
+    }
+
+    .tile-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #333;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* To use a real photo, add inside .tile-image:
+       <img src="yourphoto.jpg">
+       and the label will sit on top of it automatically */
+
+    .tile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: absolute;
+    }
+
+    .tile-label {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 6px 8px;
+      font-size: 0.85em;
+      width: 100%;
+      position: relative;
+    }
+
+    /* --- ENTRY PAGE --- */
+    .entry-back {
+      font-size: 0.9em;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .entry-image {
+      width: 100%;
+      background: #333;
+      aspect-ratio: 16/9;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 0.85em;
+    }
+
+    .entry-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .entry-date {
+      font-size: 0.85em;
+      color: #aaa;
+      margin-bottom: 16px;
+    }
+
+    .entry-body p {
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+
+    .stars {
+      color: #aaa;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="show('home')">Home</a>
+    <a href="#" onclick="show('life')">Life Blog</a>
+    <a href="#" onclick="show('prints')">3D Prints</a>
+    <a href="#" onclick="show('research')">Research</a>
+    <a href="#" onclick="show('hobbies')">Interests & Hobbies</a>
+    <a href="#" onclick="show('art')">Art</a>
+    <a href="#" onclick="show('books')">Book Reviews</a>
+  </nav>
+
+
+  <!-- ==================== HOME ==================== -->
+  <div class="page active" id="home">
+    <h1>Darian Mohsenin</h1>
+    <p>Welcome to my corner of the internet.</p>
+    <p>I'm a researcher, maker, and student. This site is where I keep track of things I'm working on and thinking about.</p>
+    <hr>
+    <p>Use the links above to explore.</p>
+  </div>
+
+
+  <!-- ==================== LIFE ==================== -->
+  <div class="page" id="life">
+    <h1>Life Blog</h1>
+    <hr>
+    <div class="tile-grid">
+
+      <div class="tile" onclick="show('life-1')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">MARCH 2026 - Started this website</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page" id="life-1">
+    <a class="entry-back" href="#" onclick="show('life')">&larr; Back to Life Blog</a>
+    <h1>Started this website</h1>
+    <div class="entry-date">March 2026</div>
+    <div class="entry-image">[ add an image ]</div>
+    <div class="entry-body">
+      <p>Finally put all the scattered parts of my life in one place. Still figuring out what this site will be.</p>
+    </div>
+  </div>
+
+
+  <!-- ==================== 3D PRINTS ==================== -->
+  <div class="page" id="prints">
+    <h1>3D Prints</h1>
+    <hr>
+    <div class="tile-grid">
+
+      <div class="tile" onclick="show('print-1')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">Mouse Anesthesia Mask</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page" id="print-1">
+    <a class="entry-back" href="#" onclick="show('prints')">&larr; Back to 3D Prints</a>
+    <h1>Mouse Anesthesia Mask</h1>
+    <div class="entry-image">[ add an image ]</div>
+    <div class="entry-body">
+      <p>May need to be re-sized.</p>
+    </div>
+  </div>
+
+
+  <!-- ==================== RESEARCH ==================== -->
+  <div class="page" id="research">
+    <h1>Research</h1>
+    <hr>
+    <div class="tile-grid">
+
+      <div class="tile" onclick="show('research-1')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">Editorial: Microglia and tissue macrophages in pain</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page" id="research-1">
+    <a class="entry-back" href="#" onclick="show('research')">&larr; Back to Research</a>
+    <h1>Editorial: Microglia and tissue macrophages in pain</h1>
+    <div class="entry-date">2025 &mdash; Frontiers in Immunology</div>
+    <div class="entry-body">
+      <p>Darian Mohsenin, Jessica Yu, Zhonghui Guan, Xiaobing Yu.</p>
+      <p><a href="#">Link to paper</a></p>
+    </div>
+  </div>
+
+
+  <!-- ==================== HOBBIES ==================== -->
+  <div class="page" id="hobbies">
+    <h1>Interests & Hobbies</h1>
+    <hr>
+    <div class="tile-grid">
+
+      <div class="tile" onclick="show('hobby-1')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">Oceanography</div>
+        </div>
+      </div>
+
+      <div class="tile" onclick="show('hobby-2')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">Visual Arts</div>
+        </div>
+      </div>
+
+      <div class="tile" onclick="show('hobby-3')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">Birding</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page" id="hobby-1">
+    <a class="entry-back" href="#" onclick="show('hobbies')">&larr; Back to Hobbies</a>
+    <h1>Oceanography</h1>
+    <div class="entry-image">[ add an image ]</div>
+    <div class="entry-body">
+      <p>How do sailors know which way to turn their sails? When do surfers know to call out sick from work to catch the perfect wave? Learning about the dynamic forces of the ocean and how they affect weather patterns.</p>
+    </div>
+  </div>
+
+  <div class="page" id="hobby-2">
+    <a class="entry-back" href="#" onclick="show('hobbies')">&larr; Back to Hobbies</a>
+    <h1>Visual Arts</h1>
+    <div class="entry-image">[ add an image ]</div>
+    <div class="entry-body">
+      <p>Painting, drawing, sculpture.</p>
+    </div>
+  </div>
+
+  <div class="page" id="hobby-3">
+    <a class="entry-back" href="#" onclick="show('hobbies')">&larr; Back to Hobbies</a>
+    <h1>Birding</h1>
+    <div class="entry-image">[ add an image ]</div>
+    <div class="entry-body">
+      <p>Gosh, I need to update my life list!</p>
+    </div>
+  </div>
+
+
+  <!-- ==================== ART ==================== -->
+  <div class="page" id="art">
+    <h1>Art</h1>
+    <hr>
+    <div class="tile-grid">
+
+      <div class="tile" onclick="show('art-1')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">Pyramidal Neuron</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page" id="art-1">
+    <a class="entry-back" href="#" onclick="show('art')">&larr; Back to Art</a>
+    <h1>Pyramidal Neuron</h1>
+    <div class="entry-date">2025 &mdash; Wire sculpture</div>
+    <div class="entry-image">[ add an image ]</div>
+    <div class="entry-body">
+      <p>Wire sculpture of a pyramidal neuron. This piece was presented at 'The Canvas Within', a UCSF neuroscience art exhibition.</p>
+    </div>
+  </div>
+
+
+  <!-- ==================== BOOKS ==================== -->
+  <div class="page" id="books">
+    <h1>Book Reviews</h1>
+    <hr>
+    <div class="tile-grid">
+
+      <div class="tile" onclick="show('book-1')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">The Moon Is Down</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page" id="book-1">
+    <a class="entry-back" href="#" onclick="show('books')">&larr; Back to Book Reviews</a>
+    <h1>The Moon Is Down</h1>
+    <div class="entry-date">John Steinbeck &mdash; 1942</div>
+    <div class="stars">★★★★</div>
+    <div class="entry-body">
+      <p>In high school, I read "East of Eden" and so I was curious about this Steinbeck novel I found in a free library while walking around the Outer Sunset, SF. In this novel, Steinbeck tells a fictional story of a military occupation in a small town in Europe.</p>
+      <p>The story is a powerful exploration of human resilience and the spirit of resistance amongst the townfolk. This is contrasted with the occupying army who are portrayed as cold, calculated, and controlled by their orders. As the story progresses, we see the psychological toll of the occupation on both sides.</p>
+    </div>
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    function show(id) {
+      var pages = document.querySelectorAll('.page');
+      for (var i = 0; i < pages.length; i++) {
+        pages[i].classList.remove('active');
+      }
+      document.getElementById(id).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+</body>
+</html>
