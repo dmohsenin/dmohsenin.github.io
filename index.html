@@ -87,15 +87,14 @@
       width: 100%;
       aspect-ratio: 4/3;
       background: #333;
+      background-image: url("redwood_trees.JPG");
+      background-size: cover;
+      background-position: center;
       display: flex;
       align-items: flex-end;
       position: relative;
       overflow: hidden;
     }
-
-    /* To use a real photo, add inside .tile-image:
-       <img src="yourphoto.jpg">
-       and the label will sit on top of it automatically */
 
     .tile-image img {
       width: 100%;
@@ -186,10 +185,18 @@
     <hr>
     <div class="tile-grid">
 
+      <div class="tile" onclick="show('life-2')">
+        <div class="tile-image">
+          <!-- <img src="yourphoto.jpg"> -->
+          <div class="tile-label">MARCH 11, 2026 - Got a new guitar amp</div>
+        </div>
+      </div>
+
+
       <div class="tile" onclick="show('life-1')">
         <div class="tile-image">
           <!-- <img src="yourphoto.jpg"> -->
-          <div class="tile-label">MARCH 2026 - Started this website</div>
+          <div class="tile-label">MARCH 04, 2026 - Started this website</div>
         </div>
       </div>
 
@@ -199,10 +206,18 @@
   <div class="page" id="life-1">
     <a class="entry-back" href="#" onclick="show('life')">&larr; Back to Life Blog</a>
     <h1>Started this website</h1>
-    <div class="entry-date">March 2026</div>
-    <div class="entry-image">[ add an image ]</div>
+    <div class="entry-date">March 04, 2026</div>
     <div class="entry-body">
-      <p>Finally put all the scattered parts of my life in one place. Still figuring out what this site will be.</p>
+      <p> I started this website to keep track of projects and thoughts. It is meant to be a space for documenting my work, ideas, hobbies, and interests! I am excited to see how this website develops. </p>
+    </div>
+  </div>
+
+  <div class="page" id="life-2">
+    <a class="entry-back" href="#" onclick="show('life')">&larr; Back to Life Blog</a>
+    <h1>Got a new guitar amp</h1>
+    <div class="entry-date">March 11,2026</div>
+    <div class="entry-body">
+     <p> I got a new guitar amp...gosh it sounds sooo much better than my cheap one! Prior to this, I was convinced that I just couldn't play electric guitar :(. The new amp makes for a fuller sounding tone. The cheap amp amplified high frequencies while muddying out the low bass notes. Jumping from chord to chord has me thinking about writing my own lyrics.</p>
     </div>
   </div>
 
@@ -255,7 +270,7 @@
     <div class="entry-date">2025 &mdash; Frontiers in Immunology</div>
     <div class="entry-body">
       <p>Darian Mohsenin, Jessica Yu, Zhonghui Guan, Xiaobing Yu.</p>
-      <p><a href="#">Link to paper</a></p>
+      <p><a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1666972/full" target="_blank">Link to paper</a></p>
     </div>
   </div>
 
@@ -353,8 +368,15 @@
 
       <div class="tile" onclick="show('book-1')">
         <div class="tile-image">
-          <!-- <img src="yourphoto.jpg"> -->
+          <img src="steinbeck_the_moon_is_down.jpg">
           <div class="tile-label">The Moon Is Down</div>
+        </div>
+      </div>
+
+           <div class="tile" onclick="show('book-2')">
+        <div class="tile-image">
+          <img src="conrad_heart_of_darkness.jpg">
+          <div class="tile-label">Heart of Darkness</div>
         </div>
       </div>
 
@@ -365,10 +387,19 @@
     <a class="entry-back" href="#" onclick="show('books')">&larr; Back to Book Reviews</a>
     <h1>The Moon Is Down</h1>
     <div class="entry-date">John Steinbeck &mdash; 1942</div>
-    <div class="stars">★★★★</div>
     <div class="entry-body">
-      <p>In high school, I read "East of Eden" and so I was curious about this Steinbeck novel I found in a free library while walking around the Outer Sunset, SF. In this novel, Steinbeck tells a fictional story of a military occupation in a small town in Europe.</p>
+      <p>In high school, I read "East of Eden" and so I was curious about this Steinbeck novella I found in a free library while walking around the Outer Sunset, SF. In this novella, Steinbeck tells a fictional story of a military occupation in a small town in Europe.</p>
       <p>The story is a powerful exploration of human resilience and the spirit of resistance amongst the townfolk. This is contrasted with the occupying army who are portrayed as cold, calculated, and controlled by their orders. As the story progresses, we see the psychological toll of the occupation on both sides.</p>
+    </div>
+  </div>
+
+  <div class="page" id="book-2">
+    <a class="entry-back" href="#" onclick="show('books')">&larr; Back to Book Reviews</a>
+    <h1>Heart of Darkness</h1>
+    <div class="entry-date">Joseph Conrad &mdash; 1899</div>
+    <div class="entry-body">
+      <p>"Heart of Darkness" is a novella by Joseph Conrad, published in 1899. The story follows Charles Marlow as he journeys up the Congo River in search of a man named Kurtz, who is rumored to be a brilliant and powerful ivory trader.</p>
+      <p>The novella is a critique of European colonialism and the brutal treatment of indigenous peoples. It explores themes of imperialism, racism, and the darkness of the human soul. I was particularly moved by the prose and psychological depth of the narrator.</p>
     </div>
   </div>
 
