@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+  </head>
+  <body>
+    <nav aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}#home">Home</a>
+      {% for section in site.data.sections %}
+        <a href="{{ '/' | relative_url }}#{{ section.id }}">{{ section.title }}</a>
+      {% endfor %}
+    </nav>
+    <main>{{ content }}</main>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+title: Darian Mohsenin
+description: Research, projects, hobbies, art, and book reviews by Darian Mohsenin.
+collections:
+  entries:
+    output: true
+    permalink: /:collection/:name/
+defaults:
+  - scope:
+      path: ""
+      type: entries
+    values:
+      layout: entry
+exclude:
+  - README.md
+  - new-page.ps1
+  - TEMPLATE.md

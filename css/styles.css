@@ -1,0 +1,178 @@
+body {
+  font-family: optima, sans-serif;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 40px 20px;
+  background: #111;
+  color: #eee;
+}
+
+html {
+  background-image: url("../assets/images/backgrounds/neuron_clipart.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+a {
+  color: #aac4ff;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 30px 0;
+}
+
+/* --- NAVBAR --- */
+nav {
+  background-color: azure;
+  padding: 10px;
+  margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #111;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- SECTIONS --- */
+.intro,
+.listing {
+  scroll-margin-top: 80px;
+}
+
+.listing {
+  margin-top: 72px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 6px;
+}
+
+/* --- TILE GRID --- */
+.tile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.tile {
+  display: block;
+  cursor: pointer;
+  border: 1px solid #555;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tile:hover {
+  border-color: azure;
+}
+
+.tile-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #333;
+  background-image: url("../assets/images/backgrounds/redwood_trees.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.tile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+}
+
+.tile-label {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 8px;
+  font-size: 0.85em;
+  width: 100%;
+  position: relative;
+}
+
+/* --- ENTRY PAGE --- */
+.entry-back {
+  font-size: 0.9em;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.entry-image {
+  width: 100%;
+  background: #333;
+  aspect-ratio: 16/9;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.85em;
+}
+
+.entry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.entry-date {
+  font-size: 0.85em;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.entry-body p {
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.stars {
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 700px) {
+  body {
+    margin: 0 auto;
+    padding: 20px 16px 40px;
+  }
+
+  nav {
+    display: flex;
+    gap: 10px 16px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    margin-right: 0;
+  }
+
+  .tile-grid {
+    grid-template-columns: 1fr;
+  }
+}
